@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="navbar">
       <div class="container">
-        <div class="header-top">
+        <div class="navbar-top">
           <a href="#" class="logo">
             <img src="img/logo_horizontal.svg" alt="logo: Best Tour Plan" class="logo__image" />
           </a>
 
-          <form action="#" class="search header__search">
+          <form action="#" class="search navbar__search">
             <input type="text" class="search__input" placeholder="Search Location" />
             <button class="search__button">
               <img src="img/search_button.svg" alt="icon: search" />
             </button>
           </form>
 
-          <a href="#" class="user">
+          <a href="#" class="user navbar__user">
             <img
               src="img/users_avatar/user_avatar_nathan.jpg"
               alt="avatar: Nathan"
@@ -34,25 +34,36 @@
             <span class="user__name">Nathan</span>
           </a>
           <!-- /.user -->
+          <button class="menu-button navbar-top__menu_button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
         </div>
-        <!-- /.header-top -->
+        <!-- /.navbar-top -->
 
-        <nav>
-          <ul class="header-menu">
-            <li class="header-menu__item"><a href="#" class="header-menu__link">All Deals</a></li>
-            <li class="header-menu__item"><a href="#" class="header-menu__link">Hotels</a></li>
-            <li class="header-menu__item"><a href="#" class="header-menu__link">Activities</a></li>
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__link">Hotel Day Packages</a>
-            </li>
-            <li class="header-menu__item"><a href="#" class="header-menu__link">Restaurants</a></li>
-            <li class="header-menu__item"><a href="#" class="header-menu__link">Events</a></li>
-            <li class="header-menu__item"><a href="#" class="header-menu__link">Rodrigues</a></li>
-          </ul>
-        </nav>
+
         <!-- /.header-menu -->
       </div>
       <!-- /.container -->
+      <div class="navbar-bottom">
+        <div class="container">
+          <nav>
+            <ul class="navbar-menu">
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
+              <li class="navbar-menu__item">
+                <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+              </li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /.navbar-bottom -->
     </header>
   </body>
 </html>
