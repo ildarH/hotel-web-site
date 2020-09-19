@@ -555,6 +555,8 @@ template {
 .hotel-description {
   font-size: 12px;
   line-height: 15px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .stars {
@@ -646,6 +648,7 @@ template {
     border: none;
     background-color: #fff;
     cursor: pointer;
+    outline: none;
   }
   .menu-button__line {
     width: 16px;
@@ -653,8 +656,8 @@ template {
     background-color: #333333;
   }
   .stars {
-    -ms-flex-preferred-size: content;
-        flex-basis: content;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
