@@ -35,8 +35,9 @@
       text-transform: uppercase
 .subscribe
   position: relative
-  width: 350px
-  height: 55px
+  min-width: 350px
+  min-height: 55px
+  max-height: auto
   border-radius: 4px
   overflow: hidden
   &__input
@@ -57,6 +58,8 @@
     top: 0
     height: 100%
     border: none
+    // text-overflow: clip
+    white-space: normal
     background-color: $primaryColor
     color: $light
     outline: none

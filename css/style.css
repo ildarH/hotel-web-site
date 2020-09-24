@@ -859,8 +859,9 @@ template {
 
 .subscribe {
   position: relative;
-  width: 350px;
-  height: 55px;
+  min-width: 350px;
+  min-height: 55px;
+  max-height: auto;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -885,6 +886,7 @@ template {
   top: 0;
   height: 100%;
   border: none;
+  white-space: normal;
   background-color: #EC1F46;
   color: #fff;
   outline: none;
@@ -897,6 +899,7 @@ template {
 
 .reviews__title {
   font-family: Mulish;
+  text-transform: uppercase;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -904,6 +907,14 @@ template {
   letter-spacing: 0em;
   text-align: center;
   margin-bottom: 70px;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 .reviews-slider__item {
@@ -918,7 +929,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   background-color: white;
   border-radius: 8px;
@@ -999,12 +1010,22 @@ template {
 }
 
 .reviews-slider__username {
+  display: block;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: #EC1F46;
+  margin-top: 9px;
   margin-bottom: 10px;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 .reviews-slider__date {
@@ -1041,7 +1062,7 @@ template {
   .slider {
     width: 590px;
   }
-  .swiper-slide__image {
+  .hotel-slider__image {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -1089,7 +1110,7 @@ template {
   .hotel__slider {
     margin-bottom: 30px;
   }
-  .slider {
+  .hotel-slider {
     width: 100%;
   }
   .booking {
@@ -1097,6 +1118,14 @@ template {
   }
   .map {
     width: 340px;
+  }
+  .reviews__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 
@@ -1165,15 +1194,15 @@ template {
             order: -1;
     margin-left: 0;
   }
-  .slider {
-    height: 350px;
-  }
   .hotel-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 450px;
+  }
+  .hotel-slider {
+    height: 350px;
   }
   .booking {
     width: 100%;
@@ -1192,17 +1221,32 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .reviews__title {
+    margin-bottom: 50px;
+  }
+  .reviews-slider__button-prev {
+    left: 10%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-left: -45px;
+  }
+  .reviews-slider__button-next {
+    right: 10%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+    margin-right: -45px;
+  }
 }
 
 @media (max-width: 576px) {
   .logo {
     width: 99px;
   }
-  .slider {
-    height: 250px;
-  }
   .hotel__slider {
     margin-bottom: 20px;
+  }
+  .hotel-slider {
+    height: 250px;
   }
   .newsletter {
     padding: 76px 0 83px 0;
@@ -1212,6 +1256,32 @@ template {
   }
   .subscribe {
     width: 100%;
+  }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 42px;
+  }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item::after, .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 30px;
+  }
+  .reviews-slider__button-prev {
+    left: 40%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-left: -65px;
+  }
+  .reviews-slider__button-next {
+    right: 40%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+    margin-right: -65px;
   }
 }
 /*# sourceMappingURL=style.css.map */
