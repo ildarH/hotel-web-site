@@ -14,19 +14,12 @@ var hotelSlider = new Swiper('.hotel-slider', {
   },
 });
 var reviewSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
-
-  // Navigation arrows
   navigation: {
     nextEl: '.reviews-slider__button-next',
     prevEl: '.reviews-slider__button-prev',
   },
-  // keyboard: {
-  //   enabled: true,
-  //   onlyInViewport: false,
-  // },
 });
 
 ymaps.ready(init);

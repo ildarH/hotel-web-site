@@ -886,6 +886,7 @@ template {
   top: 0;
   height: 100%;
   border: none;
+  text-overflow: clip;
   white-space: normal;
   background-color: #EC1F46;
   color: #fff;
@@ -906,7 +907,7 @@ template {
   line-height: 45px;
   letter-spacing: 0em;
   text-align: center;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
   -webkit-margin-before: 0px;
           margin-block-start: 0px;
   -webkit-margin-after: 0px;
@@ -960,7 +961,7 @@ template {
 
 .reviews-slider__button {
   position: absolute;
-  top: 50%;
+  top: 46%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 30px;
@@ -977,12 +978,12 @@ template {
 
 .reviews-slider__button-prev {
   background-image: url(../img/arrow_prev_secondary.svg);
-  left: 0px;
+  left: -50px;
 }
 
 .reviews-slider__button-next {
   background-image: url(../img/arrow_next_secondary.svg);
-  right: 0px;
+  right: -50px;
 }
 
 .reviews-slider__profile {
@@ -1055,11 +1056,15 @@ template {
   margin: auto;
 }
 
+.swiper-container-for-buttons {
+  position: relative;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel-slider {
     width: 590px;
   }
   .hotel-slider__image {
@@ -1222,19 +1227,22 @@ template {
             flex-direction: column;
   }
   .reviews__title {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+  .reviews-slider__button {
+    top: 46%;
   }
   .reviews-slider__button-prev {
-    left: 10%;
+    left: 5%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
-    margin-left: -45px;
+    margin-left: -40px;
   }
   .reviews-slider__button-next {
-    right: 10%;
+    right: 5%;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
-    margin-right: -45px;
+    margin-right: -40px;
   }
 }
 
@@ -1260,7 +1268,7 @@ template {
   .reviews__title {
     font-size: 18px;
     line-height: 23px;
-    margin-bottom: 42px;
+    padding-bottom: 42px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;

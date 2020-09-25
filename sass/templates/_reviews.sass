@@ -9,7 +9,7 @@
     line-height: 45px
     letter-spacing: 0em
     text-align: center
-    margin-bottom: 70px
+    padding-bottom: 70px
     margin-block-start: 0px;
     margin-block-end: 0px;
     margin-inline-start: 0px;
@@ -45,7 +45,7 @@
         background-repeat: no-repeat
     &__button
       position: absolute
-      top: 50%
+      top: 46%
       transform: translateY(-50%)
       width: 30px
       height: 30px
@@ -59,10 +59,10 @@
       z-index: 2
       &-prev
         background-image: url(../img/arrow_prev_secondary.svg)
-        left: 0px
+        left: -50px
       &-next
         background-image: url(../img/arrow_next_secondary.svg)
-        right: 0px
+        right: -50px
     &__profile
       display: flex
       flex-direction: column
@@ -105,4 +105,6 @@
       line-height: 160%
       text-align: justify
       margin: auto
+.swiper-container-for-buttons
+  position: relative
 
