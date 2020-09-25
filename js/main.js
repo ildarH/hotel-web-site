@@ -1,3 +1,4 @@
+//swiper slider for hotel section
 var hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   direction: 'horizontal',
@@ -13,6 +14,8 @@ var hotelSlider = new Swiper('.hotel-slider', {
     onlyInViewport: false,
   },
 });
+
+// swiper slider for review section
 var reviewSlider = new Swiper('.reviews-slider', {
   direction: 'horizontal',
   loop: true,
@@ -22,6 +25,7 @@ var reviewSlider = new Swiper('.reviews-slider', {
   },
 });
 
+// yandex map
 ymaps.ready(init);
 function init() {
   let myPlacemark;
@@ -37,3 +41,12 @@ function init() {
     };
   myMap.geoObjects.add(myPlacemark);
 }
+
+// parallax newsletter section
+window.addEventListener('scroll', function (e) {
+  const target = document.querySelector('.newsletter');
+  let scrollValue = window.pageYOffset;
+  let scrollRate = scrollValue * 0.1;
+  target.style.backgroundPosition = 'center ' + scrollRate + '%';
+  console.log(scrollRate);
+});
