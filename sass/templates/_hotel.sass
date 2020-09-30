@@ -14,6 +14,14 @@
       margin-bottom: 0
     &__description
       margin: 0
+    &__rating
+      min-height: 45px
+      max-width: 65px
+      text-align: center
+      color: $light
+      background-color: $primaryColor
+      border-radius: 4px
+      flex-wrap: wrap
   &-name
     font-size: 24px
     line-height: 30px
@@ -73,6 +81,13 @@
       &-prev
         left: 18px
         background-image: url(../img/arrow_prev.svg)
+  &-rating
+    &__text
+      font-size: 8px
+      line-height: 10px
+    &__counter
+      font-size: 14px
+      line-height: 18px
 .stars
   flex-basis: 100%
 .offer
@@ -82,21 +97,9 @@
   background-color: $primaryColor
   border-radius: 3px
   color: $light
-.rating
-  min-height: 45px
-  max-width: 65px
-  text-align: center
-  color: $light
-  background-color: $primaryColor
-  border-radius: 4px
-  &__text
-    font-size: 8px
-    line-height: 10px
-  &__counter
-    font-size: 14px
-    line-height: 18px
 .swiper-container
-  
+  margin-left: 0
+  margin-right: 0
 .booking
   background-color: $dark
   color: $light

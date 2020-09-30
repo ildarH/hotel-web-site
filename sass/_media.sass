@@ -11,6 +11,28 @@
   .card
     width: 230px
     height: 230px
+  .other-packages
+    &__grid
+      grid-gap: 10px
+      grid-template-columns: repeat(3, 310px)
+  .card
+    &-1
+      width: 630px
+      &-header
+        width: 315px
+        &__image
+          object-fit: cover
+      &-main
+        padding: 35px 15px 20px 35px
+    &-2, &-3, &-4, &-5
+      width: 310px
+      &-main
+        padding: 30px 15px 20px 35px
+        &__info
+          padding-top: 50px
+        &__footer
+          padding-top: 40px
+
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -52,6 +74,13 @@
     &-slider
       &__item
         max-width: 580px
+
+      &__button
+        top: 40%
+        &-prev
+          left: -10%
+        &-next
+          right: -10%
   .activities
     &-wrapper
       flex-wrap: wrap
@@ -60,6 +89,25 @@
   .card
     width: 340px
     height: 255px
+  .other-packages
+    &__grid
+      grid-gap: 20px
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+  .card
+    &-1
+      width: 710px
+      &-header
+        width: 355px
+      &-main
+        &__text
+          padding-top: 45px
+    &-2, &-3, &-4, &-5
+      width: 345px
+      &-main
+        &__info
+          padding-top: 20px
+
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -123,21 +171,76 @@
       padding-bottom: 50px
     &-slider
       &__button
-        top: 46%
+        top: 40%
         &-prev
-          left: 5%
-          transform: translate(-50%, 0)
-          margin-left: -40px
+          left: -10%
         &-next
-          right: 5%
-          transform: translate(50%, 0)
-          margin-right: -40px
+          right: -10%
   .activities
     padding-top: 40px
     padding-bottom: 60px
   .card
     width: 49%
     height: 255px
+  .other-packages
+    &__grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(auto-fill, 250px)
+  .card
+    &-1
+      grid-column: auto
+      height: auto
+      width: auto
+      &-header
+        &__promo
+          width: 60px
+          height: 18px
+          font-size: 8px
+          line-height: 10px
+          padding: 4px 9px
+      &-main
+        &__text, &__rating
+          display: none
+          // padding-top: 45px
+    &-2, &-3, &-4, &-5
+      flex-direction: row
+      width: auto
+      height: auto
+      &-main
+        &__info
+          padding-top: 20px
+    &-1, &-2, &-3, &-4, &-5
+      &-header
+        width: 50%
+        height: 250px
+        &__image
+          object-fit: cover
+          width: 100%
+          max-height: 250px
+      &-main
+        padding: 20px 10px 10px 20px
+        &__info
+          padding-top: 30px
+        &__footer
+          padding-top: 65px
+          &-info
+        &-footer
+          &__button
+            width: 100px
+            height: 30px
+            font-size: 12px
+            padding: 5px 10px
+      &-info
+        &-text
+          padding-bottom: 5px
+          &__icon
+            padding-right: 5px
+      &-footer
+        &-price
+          &__old
+            font-size: 12px
+          &__new
+            font-size: 14px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -183,3 +286,31 @@
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
+  .other-packages
+    &__grid
+      grid-column: 1
+  .card
+    &-1, &-2, &-3, &-4, &-5
+      justify-content: space-between
+      flex-direction: row
+      width: auto
+      height: auto
+      grid-column: auto
+      &-header
+        display: none
+      &-main
+        padding: 20px 10px 10px 20px
+        justify-content: space-between
+        flex-grow: 1
+        &__info
+          padding-top: 30px
+        &__footer
+          padding-top: 15px
+        &-footer
+          flex-direction: row
+          
+          &-price
+      &-footer
+        &-price
+          margin-top: 0
+          flex-grow: 1
