@@ -58,7 +58,7 @@ function isElementInViewport(el) {
 }
 
 const box = document.querySelector('.newsletter'),
-  URL_BG_PATH = '../img/newsletter_background.jpg';
+  URL_BG_PATH = 'img/newsletter_background.jpg';
 
 document.addEventListener(
   'scroll',
@@ -66,7 +66,7 @@ document.addEventListener(
     let scrollValue = window.pageYOffset;
     // console.log(messageText);
     if (isElementInViewport(box)) {
-      box.style.background = "url('" + URL_BG_PATH + "')";
+      box.style.background = 'url(' + URL_BG_PATH + ')';
       box.style.backgroundPositionY = scrollValue * 0.1 + '%';
     } else {
       // box.style.background = '';
