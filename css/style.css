@@ -1553,6 +1553,9 @@ template {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .footer__message {
@@ -1564,6 +1567,9 @@ template {
       flex-basis: 100%;
   margin-bottom: 23px;
   height: 123px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .footer__button {
@@ -1580,6 +1586,9 @@ template {
   outline: none;
   cursor: pointer;
   border-radius: 4px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .footer__info {
@@ -1588,6 +1597,9 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 
 .footer__disclaimer {
@@ -2182,19 +2194,38 @@ template {
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
-    -ms-grid-column-align: start;
-        justify-self: start;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .footer__payicons {
-    -ms-grid-row: 8;
-    grid-row: 8;
+    -ms-grid-row: 9;
+    grid-row: 9;
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
-    -ms-grid-column-align: end;
-        justify-self: end;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .footer__form {
+    font-weight: wrap;
+  }
+  .footer__info {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  .footer__button {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 /*# sourceMappingURL=style.css.map */
