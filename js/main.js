@@ -1,11 +1,9 @@
 $(document).ready(function () {
   //swiper slider for hotel section
   var hotelSlider = new Swiper('.hotel-slider', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.hotel-slider__button-next',
       prevEl: '.hotel-slider__button-prev',
@@ -45,38 +43,43 @@ $(document).ready(function () {
 
   // parallax newsletter section
 
-  function isElementInViewport(el) {
-    let rect = el.getBoundingClientRect();
+  // function isElementInViewport(el) {
+  //   let rect = el.getBoundingClientRect();
 
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.pageYOffset || document.documentElement.clientHeight) /* or $(window).height() */ &&
-      rect.right <=
-        (window.pageXOffset || document.documentElement.clientWidth) /* or $(window).width() */
-    );
-  }
+  //   return (
+  //     rect.top >= 0 &&
+  //     rect.left >= 0 &&
+  //     rect.bottom <=
+  //       (window.pageYOffset || document.documentElement.clientHeight) /* or $(window).height() */ &&
+  //     rect.right <=
+  //       (window.pageXOffset || document.documentElement.clientWidth) /* or $(window).width() */
+  //   );
+  // }
 
-  const box = document.querySelector('.newsletter'),
-    URL_BG_PATH = 'img/newsletter_background.jpg';
+  // const box = document.querySelector('.newsletter'),
+  //   URL_BG_PATH = 'img/newsletter_background.jpg';
 
-  document.addEventListener(
-    'scroll',
-    function () {
-      let scrollValue = window.pageYOffset;
-      // console.log(messageText);
-      if (isElementInViewport(box)) {
-        box.style.background = 'url(' + URL_BG_PATH + ')';
-        box.style.backgroundPositionY = scrollValue * 0.1 + '%';
-      } else {
-        // box.style.background = '';
-      }
-    },
-    {
-      passive: true,
-    },
-  );
+  // document.addEventListener(
+  //   'scroll',
+  //   function () {
+  //     let scrollValue = window.pageYOffset;
+  //     // console.log(messageText);
+  //     if (isElementInViewport(box)) {
+  //       box.style.background = 'url(' + URL_BG_PATH + ')';
+  //       box.style.backgroundPositionY = scrollValue * 0.1 + '%';
+  //     } else {
+  //       // box.style.background = '';
+  //     }
+  //   },
+  //   {
+  //     passive: true,
+  //   },
+  // );
+
+  $('.parallax-window').parallax({
+    naturalWidth: 2880,
+    naturalHeight: 1913,
+  });
 
   // mobile menu
   let menuButton = $('.menu-button');
@@ -110,4 +113,25 @@ $(document).ready(function () {
       closeModal(event);
     }
   });
+
+  $('.form').each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      messages: {
+        name: {
+          required: 'Укажите имя',
+          minlength: 'Имя должно быть не короче двух букв',
+        },
+        email: {
+          required: 'Нам нужен ваш адрес электронной почты для связи',
+          email: 'Адрес электронной почты должен быть в формате name@domain.com',
+        },
+        phone: {
+          required: 'Укажите номер телефона для связи',
+        },
+      },
+    });
+  });
+
+  $('.input-phone').mask('+0 (000) 000-00-00');
 });
