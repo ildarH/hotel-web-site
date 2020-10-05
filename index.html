@@ -64,7 +64,7 @@
                 <span class="user__name user__name__color_light">Nathan</span>
                 </a>
               </li>
-              <li class="navbar-menu__item navbar-menu__item__mobile_visible">
+              <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                 <form action="#" class="search navbar__search navbar__search__mobile_visible">
                   <input type="text" class="search__input" placeholder="Search Location" />
                   <button class="search__button">
@@ -844,10 +844,10 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contacts-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="#" class="footer__form">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*">
-              <input type="text" class="input footer__input" placeholder="Phone Number*">
-              <textarea class="footer__message" placeholder="Message"></textarea>
+            <form action="send.php" method="POSTElsa Jean" class="footer__form">
+              <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*">
+              <input type="text" name="phone" class="input footer__input" placeholder="Phone Number*">
+              <textarea name="message" class="footer__message" placeholder="Message"></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
