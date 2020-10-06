@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  //Animate On Scroll Library initialization
+  AOS.init();
+
   //swiper slider for hotel section
   var hotelSlider = new Swiper('.hotel-slider', {
     direction: 'horizontal',
