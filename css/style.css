@@ -1588,6 +1588,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   min-width: 255px;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
@@ -1802,7 +1806,7 @@ template {
   .card-2-main__footer, .card-3-main__footer, .card-4-main__footer, .card-5-main__footer {
     padding-top: 40px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1912,7 +1916,7 @@ template {
         grid-template-columns: repeat(6, 1fr);
     grid-gap: 40px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
@@ -2206,7 +2210,7 @@ template {
   .card-1-footer-price__new, .card-2-footer-price__new, .card-3-footer-price__new, .card-4-footer-price__new, .card-5-footer-price__new {
     font-size: 14px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
