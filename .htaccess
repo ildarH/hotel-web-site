@@ -1,0 +1,86 @@
+### Сжать ответ сервера для перечисленных MIME типов
+<ifModule mod_deflate.c>
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE text/plain text/html
+      AddOutputFilterByType DEFLATE text/css
+      AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+      AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+      AddOutputFilterByType DEFLATE application/json
+      AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon  </ifModule>
+      AddOutputFilterByType DEFLATE / x-font-ttf application / x-font-opentype image / svg + xml  
+      </ifModule>
+</ifModule>
+ 
+### Кеширование #2
+### Подсказать браузеру схему кеширования через заголовки в ответе сервера
+<IfModule mod_expires.c>
+    # Enable expires
+    ExpiresActive On
+ 
+    # Default a cache expiration
+    ExpiresDefault "access plus 10 month"
+ 
+    # Images
+    ExpiresByType image/gif                 "access plus 1 month"
+    ExpiresByType image/png                 "access plus 1 month"
+    ExpiresByType image/jpg                 "access plus 1 month"
+    ExpiresByType image/jpeg                "access plus 1 month"
+ 
+    # CSS, JavaScript
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType text/javascript           "access plus 1 year"
+ 
+ 
+# Fonts
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot 
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+ 
+# Compress compressible fonts
+# only uncomment if you dont have compression turned on already. Otherwise it will cause all other filestypes not to get compressed
+# AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+ 
+ExpiresActive on
+ 
+# Add a far future Expires header for fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType application/x-font-opentype "access plus 1 year"
+ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+ 
+<ifModule mod_headers.c>
+
+# Не кэшировать PHP, HTML, XML
+<FilesMatch "\.(php|html|htm|xml)$">
+Header set Cache-Control "no-store, no-cache, max-age=0"
+</FilesMatch>
+
+# Кэшировать изображения 1 месяц 
+<FilesMatch "\.(gif|ico|jpg|jpeg|png|svg)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+# Кэшировать CSS и JS 1 неделю 
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+# Кэшировать шрифты 1 месяц
+<FilesMatch "\.(woff|woff2|eot|otf|ttf)$">
+Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+
+</ifModule>
+
+### Удалить заголовок ETag (иначе есть проблемы с кешированием при включенном сжатии)
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+    Header unset ETag
+</IfModule>
+FileETag None

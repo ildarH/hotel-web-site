@@ -98,6 +98,8 @@
       grid-gap: 20px
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr
+  .newsletter
+    background-color: $dark
   .card
     &-1
       width: 710px
@@ -440,3 +442,17 @@
       margin-bottom: 15px
     &__button
       order: 4
+@media ( max-width: 360px )
+  .navbar
+    &-top
+      width: 100%
+      height: 82px
+  .breadcrumb
+    &-list
+      width: 100%
+      height: 49px
+  .hotel
+    width: 100%
+    height: 100%
+  .subscribe
+    min-width: 330px
