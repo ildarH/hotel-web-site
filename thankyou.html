@@ -3,24 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Best Tour Plan - Hotel Booking</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=65343fbf-12ec-406a-bebf-254ed06336f3&lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <title>Best Tour Plan - Thankyou</title>
+    <link rel="preload" as="font" type="font/woff2" href="css/mulish-v1-latin-300.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/mulish-v1-latin-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/mulish-v1-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/mulish-v1-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-800.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-regular.woff2" crossorigin>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/lazyframe.css" as="style">
+    <link rel="preload" href="css/swiper-bundle.min.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/lazyframe.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
   </head>
   <body>
     <header class="navbar navbar__mobile_fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
-            <img src="img/logo_horizontal.svg" alt="logo: Best Tour Plan" class="logo__image" />
+            <!-- <img src="img/logo_horizontal.svg" alt="logo: Best Tour Plan" class="logo__image" /> -->
+            <svg class="logo__image icon" width="176" height="19">
+              <use xlink:href="img/sprite.svg#logo_horizontal"></use>
+            </svg>
           </a>
 
           <form action="#" class="search navbar__search navbar__search__mobile_hidden">
@@ -32,9 +44,12 @@
 
           <a href="#" class="user navbar__user navbar__user__mobile_hidden">
             <img
-              src="img/users_avatar/user_avatar_nathan.jpg"
+              src="img/blank.gif"
+              data-src="img/users_avatar/user_avatar_nathan.jpg"
               alt="avatar: Nathan"
-              class="user__avatar"
+              class="user__avatar lazy"
+              width="80"
+              height="53"
             />
             <span class="user__name">Nathan</span>
           </a>
@@ -56,12 +71,15 @@
             <ul class="navbar-menu">
               <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                 <a href="#" class="user navbar__user navbar__user__mobile_visible">
-                  <img
-                    src="img/users_avatar/user_avatar_nathan.jpg"
-                    alt="avatar: Nathan"
-                    class="user__avatar"
-                  />
-                  <span class="user__name user__name__color_light">Nathan</span>
+                <img
+                  src="img/blank.gif"
+                  data-src="img/users_avatar/user_avatar_nathan.jpg"
+                  alt="avatar: Nathan"
+                  class="user__avatar lazy"
+                  width="80"
+                  height="53"
+                />
+                <span class="user__name user__name__color_light">Nathan</span>
                 </a>
               </li>
               <li class="navbar-menu__item navbar-menu__item_mobile_visible">
@@ -96,16 +114,11 @@
       <div class="container">
         <ul class="breadcrumb-list">
           <li class="breadcrumb-list__item">
-            <a href="#" class="breadcrumb-list__link">Home</a>
+            <a href="index.html" class="breadcrumb-list__link">Home</a>
             <!-- /.breadcrumb-list__link -->
           </li>
           <!-- /.breadcrumb-list__item -->
-          <li class="breadcrumb-list__item">
-            <a href="#" class="breadcrumb-list__link">Flash Offers</a>
-            <!-- /.breadcrumb-list__link -->
-          </li>
-          <!-- /.breadcrumb-list__item -->
-          <li class="breadcrumb-list__item">Grand Hilton Hotel</li>
+          <li class="breadcrumb-list__item">Thank you</li>
           <!-- /.breadcrumb-list__item -->
         </ul>
         <!-- /.breadcrumb-list -->
@@ -115,90 +128,159 @@
 
     <section class="hotel">
       <div class="container">
-        <div class="hotel-info">
-          <div class="hotel-info__text">
-            <div class="hotel-wrapper">
-              <h1 class="hotel-name hotel-info__name">Сообщение отправлено</h1>
-              <p class="hotel-description hotel-info__description">Наш менеджер позвонит вам</p>
-            </div>
-          </div>
-          <!-- /.hotel-info__text -->
+        <div class="thankyou-wrapper thankyou">
+          <h1 class="thankyou__title">You sent a message</h1>
+          <p class="thankyou__text">A Customer Service will contact you soon.</p>
+          <button class="button button-link thankyou__button"><a class="button-link" href="index.html">Back to main</a></button>
         </div>
-        <!-- /.hotel-info -->
-        <div class="hotel-grid">
-          <!-- Slider main container -->
-          <div class="swiper-container hotel-slider hotel__slider">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide hotel-slider__item">
-                <img class="hotel-slider__image" src="img/slide_1.jpeg" alt="slide" />
-              </div>
-              <div class="swiper-slide hotel-slider__item">
-                <img class="hotel-slider__image" src="img/slide_2.jpeg" alt="slide" />
-              </div>
-              <div class="swiper-slide hotel-slider__item">
-                <img class="hotel-slider__image" src="img/slide_3.jpeg" alt="slide" />
-              </div>
-              <div class="swiper-slide hotel-slider__item">
-                <img class="hotel-slider__image" src="img/slide_4.jpeg" alt="slide" />
-              </div>
-              <div class="swiper-slide hotel-slider__item">
-                <img class="hotel-slider__image" src="img/slide_5.jpeg" alt="slide" />
-              </div>
-            </div>
-
-            <!-- If we need navigation buttons -->
-            <button class="hotel-slider__button hotel-slider__button-prev"></button>
-            <button class="hotel-slider__button hotel-slider__button-next"></button>
-          </div>
-          <!-- /.swiper-container -->
-          <div class="hotel-right">
-            <div class="booking">
-              <div class="booking__info">
-                <div class="booking__price">
-                  <span class="booking__start">price starts at</span>
-                  <strong class="booking__pricetag">$ 8,500</strong>
-                  <span class="booking__per-room">per room / night</span>
-                </div>
-                <!-- /.booking__price -->
-                <div class="booking__room">
-                  <div class="booking__text">
-                    <img class="booking__icon" src="img/user.svg" alt="icon: user" />
-                    <span class="booking__description">2 x Guests</span>
-                  </div>
-                  <div class="booking__text">
-                    <img class="booking__icon" src="img/home.svg" alt="icon: home" />
-                    <span class="booking__description">1 x Room</span>
-                  </div>
-                </div>
-                <!-- /.booking__room -->
-              </div>
-              <!-- /.booking__info -->
-              <div class="booking__call-center">
-                <span class="booking__heading">Quick Booking</span>
-                <a class="booking__number" href="tel:12100">
-                  <img src="img/phone-call.svg" alt="icon: phone number" class="" />
-                  <span class="booking__num">12100</span>
-                </a>
-              </div>
-              <!-- /.booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
-            </div>
-            <!-- /.booking -->
-            <div id="map" class="map">
-              <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abf7d470eacb0b2f089a9089c46b9661f0ae058953af48c6a3f415df7a169f0b5&amp;source=constructor" width="100%" height="213" frameborder="0"></iframe> -->
-            </div>
-            <!-- /.map -->
-          </div>
-          <!-- /.hotel-right -->
-        </div>
-        <!-- /.hotel-grid -->
-      </div>
+       </div>
       <!-- /.container -->
     </section>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <a href="#" class="footer__logo">
+            <svg class="logo footer__logo icon" width="166" height="231">
+              <use xlink:href="img/sprite.svg#logo_vertical"></use>
+            </svg>
+          </a>
+          <!-- <img src="img/logo_vertical.svg" alt="logo: Best Tour Plan" class="logo footer__logo"> -->
+          <div class="footer__list footer__categories">
+            <h3 class="footer__title">ALL CATEGORIES</h3>
+            <ul class="footer__ul">
+              <li class="footer__item"><a href="#" class="footer__link">All Deals</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Hotels</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Activities</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Spa Packages</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Hotel Day Packages</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Restaurants</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Fitness</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Rodrigues</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__list footer__additional">
+            <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
+            <ul class="footer__ul">
+              <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">How does it work?</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Frequently Asked Questions</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Deals.mu loyalty program</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Promote your Business on BTP</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__social-network">
+            <h3 class="footer__title footer__title--inline">Social Network</h3>
+            <div class="footer__social-links">
+              <a href="#" class="footer__link">
+                <!-- <img src="img/facebook_icon.svg" alt="icon: facebook"> -->
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#facebook_icon"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__link">
+                <!-- <img src="img/youtube_icon.svg" alt="icon: youtube"> -->
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#youtube_icon"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__link">
+                <!-- <img src="img/instagram_icon.svg" alt="icon: instagram"> -->
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#instagram_icon"></use>
+                </svg>
+
+              </a>
+            </div>
+            <!-- /.footer__social-links -->
+          </div>
+          <!-- /.footer__social-network -->
+          <div class="footer__list footer__legal">
+            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <ul class="footer__ul">
+              <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__contact-details">
+            <h3 class="footer__title  footer__title--mb-3">contact details</h3>
+            <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
+            <ul class="footer__ul">
+              <li class="footer__item footer__item--mb-2">
+                <div class="footer__icon-wrapper">
+                  <!-- <img class="footer__icon" src="img/map-marker_icon.svg" alt="icon: map"> -->
+                  <svg class="footer__icon icon" width="14" height="20">
+                    <use xlink:href="img/sprite.svg#map-marker_icon"></use>
+                  </svg>
+                </div>
+                9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
+              </li>
+              <li class="footer__item footer__item--mb-2">
+                <div class="footer__icon-wrapper">
+                  <!-- <img class="footer__icon" src="img/phone-call_icon.svg" alt="icon: phone"> -->
+                  <svg class="footer__icon icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#phone-call_icon"></use>
+                  </svg>
+                </div>
+                Tel (business hours) : <a class="tel" href="tel:269 1500">269 1500</a> <br>
+                Tel (hotline) Monday - Saturday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
+                Tel (hotline) Sunday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm) <br>
+              </li>
+              <li class="footer__item footer__item--mb-2">
+                <div class="footer__icon-wrapper">
+                  <svg class="icon" height="14" width="18">
+                    <use xlink:href="img/sprite.svg#email_icon"></use>
+                  </svg>
+                  <!-- <img class="footer__icon" src="img/email_icon.svg" alt="icon: email"> -->
+                </div>
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.footer__contact-details -->
+          <div class="footer__contacts-form">
+            <h3 class="footer__title footer__title--mb-4">Send us a message</h3>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group"><input type="text" name="name" class="input footer__input" placeholder="Your Full Name*" required></div>
+              <div class="footer__input-group"><input type="tel" name="phone" class="input footer__input input-phone" placeholder="Phone Number*" required></div>
+              <textarea name="message" class="message footer__message" placeholder="Message"></textarea>
+              <button class="button footer__button" type="submit">Send</button>
+              <span class="footer__info">* Required Fields</span>
+            </form>
+            <!-- /.footer__form -->
+          </div>
+          <!-- /.footer__contacts-form -->
+          <div class="footer__disclaimer">
+            <span class="disclaimer-text"><a href="#" class="disclaimer-link">Disclaimer</a></span>
+            <span class="disclaimer-text"><a href="#" class="disclaimer-link">Conditions of use</a></span>
+            <span class="disclaimer-text"><a href="#" class="disclaimer-link">Cancellation policy</a></span>
+          </div>
+          <!-- /.footer__disclaimer -->
+          <div class="footer__payicons">
+            <img src="img/blank.gif" class="lazy" data-src="img/pay_icons.png" alt="icon: pay">
+          </div>
+          <!-- /.footer__payicons -->
+        </div>
+        <!-- /.footer-wrapper -->
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/lazyframe.min.js"></script>
+    <script src="js/main-min.js"></script>
+    <script>lazyframe('.lazyframe');</script>
   </body>
 </html>

@@ -17,33 +17,16 @@
     <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-600.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-800.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="css/nunito-v14-latin-regular.woff2" crossorigin>
-    <link media="none" onload="if(media!=='all')media='all'" type="text/css" rel="stylesheet", href="css/style.css"/>
-    <link media="none" onload="if(media!=='all')media='all'" type="text/css" rel="stylesheet", href="css/swiper-bundle.min.css"/>
-    <link type="text/css" rel="stylesheet", href="css/aos.css" media="screen and (min-width: 992px)"/>
-    <link media="none" onload="if(media!=='all')media='all'" type="text/css" rel="stylesheet", href="css/lazyframe.css"/>
-    <noscript>
-      <link href="css/swiper-bundle.min.css" rel="stylesheet">
-      <link href="css/aos.css" rel="stylesheet">
-      <link href="css/lazyframe.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-    </noscript>
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png"> -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/lazyframe.css" as="style">
+    <link rel="preload" href="css/swiper-bundle.min.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/lazyframe.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <!-- <link rel="manifest" href="/manifest.json"> -->
-    <!-- <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
 
   </head>
   <body>
@@ -207,19 +190,19 @@
                 <!-- <div class="swiper-lazy-preloader"></div> -->
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img class="swiper-lazy hotel-slider__image" data-src="img/slide_2.jpg" alt="slide" />
+                <img class="swiper-lazy hotel-slider__image" src="img/blank.gif" data-src="img/slide_2.jpg" alt="slide" />
                 <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img class="swiper-lazy hotel-slider__image" data-src="img/slide_3.jpg" alt="slide" />
+                <img class="swiper-lazy hotel-slider__image" src="img/blank.gif" data-src="img/slide_3.jpg" alt="slide" />
                 <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img class="swiper-lazy hotel-slider__image" data-src="img/slide_4.jpg" alt="slide" />
+                <img class="swiper-lazy hotel-slider__image" src="img/blank.gif" data-src="img/slide_4.jpg" alt="slide" />
                 <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img class="swiper-lazy hotel-slider__image" data-src="img/slide_5.jpg" alt="slide" />
+                <img class="swiper-lazy hotel-slider__image" src="img/blank.gif" data-src="img/slide_5.jpg" alt="slide" />
                 <div class="swiper-lazy-preloader"></div>
               </div>
             </div>
@@ -429,7 +412,7 @@
 
                 <div class="card-2-info__text card-2-info-text">
                   <!-- <img class="card-2-info-text__icon" src="img/user.svg" alt="icon: user" /> -->
-                  <svg class="card-1-info-text__icon icon" width="14" height="14">
+                  <svg class="card-2-info-text__icon icon" width="14" height="14">
                     <use xlink:href="img/sprite.svg#user"></use>
                   </svg>
                   <span class="card-2-info-text__decription">2 x Guests</span>
@@ -437,7 +420,7 @@
 
                 <div class="card-2-info__text card-2-info-text">
                   <!-- <img class="card-2-info-text__icon" src="img/home.svg" alt="icon: home" /> -->
-                  <svg class="card-1-info-text__icon icon" width="14" height="14">
+                  <svg class="card-2-info-text__icon icon" width="14" height="14">
                     <use xlink:href="img/sprite.svg#home"></use>
                   </svg>
                   <span class="card-2-info-text__description">1 x Room</span>
@@ -667,7 +650,7 @@
                 </svg>
               </div>
               <h3 class="card-5-main__title">Hotel Five Star</h3>
-              <div class=card-5-main__text card-element__element_visibility">
+              <div class="card-5-main__text">
                 Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna
                 llit. Ipsum est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute
                 quis duis epteur excepteur ipsum occaecat eiusmod nsectetur enim laborum magna
@@ -693,7 +676,7 @@
 
                 <div class="card-5-info__text card-5-info-text">
                   <!-- <img class="card-5-info-text__icon" src="img/home.svg" alt="icon: home" /> -->
-                  <svg class="card-1-info-text__icon icon" width="14" height="14">
+                  <svg class="card-5-info-text__icon icon" width="14" height="14">
                     <use xlink:href="img/sprite.svg#home"></use>
                   </svg>
                   <span class="card-5-info-text__description">1 x Room</span>
@@ -991,8 +974,8 @@
             <!-- /.swiper-wrapper -->
           </div>
           <!-- /.reviews-slider -->
-          <button class="reviews-slider__button reviews-slider__button-prev"></button>
-          <button class="reviews-slider__button reviews-slider__button-next"></button>
+          <button class="reviews-slider-button reviews-slider-button-prev"></button>
+          <button class="reviews-slider-button reviews-slider-button-next"></button>
         </div>
         <!-- /.swiper-container-for-buttons -->
       </div>
@@ -1152,7 +1135,7 @@
                     <use xlink:href="img/sprite.svg#phone-call_icon"></use>
                   </svg>
                 </div>
-                Tel (business hours) : <a class="tel" href="tel:269 1500">269 1500</a> <br>
+                Tel (business hours) : <a class="tel" href="tel:269-1500">269 1500</a> <br>
                 Tel (hotline) Monday - Saturday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
                 Tel (hotline) Sunday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm) <br>
               </li>

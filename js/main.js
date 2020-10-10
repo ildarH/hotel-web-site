@@ -42,8 +42,8 @@ var hotelSlider = new Swiper('.hotel-slider', {
 
 var swiper = new Swiper(".reviews-slider", {
   navigation: {
-    nextEl: ".reviews-slider__button-next",
-    prevEl: ".reviews-slider__button-prev",
+    nextEl: ".reviews-slider-button-next",
+    prevEl: ".reviews-slider-button-prev",
   },
 });
 
