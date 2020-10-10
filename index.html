@@ -27,7 +27,7 @@
       <link href="css/lazyframe.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
     </noscript>
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
@@ -36,14 +36,14 @@
     <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png"> -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <!-- <link rel="manifest" href="/manifest.json"> -->
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
 
   </head>
   <body>
@@ -734,7 +734,7 @@
 
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people think about&nbsp;us</h2>
+        <h2 class="reviews__title">What people thinks about&nbsp;us</h2>
         <div class="swiper-container-for-buttons">
           <div class="swiper-container reviews-slider">
             <div class="swiper-wrapper">
@@ -1012,7 +1012,7 @@
               width="255"
               height="255"
             />
-            <h3 class="card__title">The curious corner of chamarel</h3>
+            <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
@@ -1038,7 +1038,7 @@
               width="255"
               height="255"
             />
-            <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
+            <h3 class="card__title">Tamarind falls hiking trip&nbsp;-&nbsp;full day</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
@@ -1064,9 +1064,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <svg class="logo footer__logo icon" width="166" height="231">
-            <use xlink:href="img/sprite.svg#logo_vertical"></use>
-          </svg>
+          <a href="#" class="footer__logo">
+            <svg class="logo footer__logo icon" width="166" height="231">
+              <use xlink:href="img/sprite.svg#logo_vertical"></use>
+            </svg>
+          </a>
           <!-- <img src="img/logo_vertical.svg" alt="logo: Best Tour Plan" class="logo footer__logo"> -->
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -1150,9 +1152,9 @@
                     <use xlink:href="img/sprite.svg#phone-call_icon"></use>
                   </svg>
                 </div>
-                Tel (business hours) : 269 1500 <br>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm) <br>
+                Tel (business hours) : <a class="tel" href="tel:269 1500">269 1500</a> <br>
+                Tel (hotline) Monday - Saturday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
+                Tel (hotline) Sunday: <a class="tel" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm) <br>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -1161,14 +1163,14 @@
                   </svg>
                   <!-- <img class="footer__icon" src="img/email_icon.svg" alt="icon: email"> -->
                 </div>
-                <a href="#" class="footer__link">cherly.lawson@example.com</a>
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a>
               </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contacts-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POSTElsa Jean" class="footer__form form">
+            <h3 class="footer__title footer__title--mb-4">Send us a message</h3>
+            <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group"><input type="text" name="name" class="input footer__input" placeholder="Your Full Name*" required></div>
               <div class="footer__input-group"><input type="tel" name="phone" class="input footer__input input-phone" placeholder="Phone Number*" required></div>
               <textarea name="message" class="message footer__message" placeholder="Message"></textarea>
@@ -1199,11 +1201,11 @@
       <!-- /.modal__overlay -->
       <div class="modal__dialog">
         <a href="#" class="modal__close">
-          <svg class="icon">
+          <svg class="icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#close_icon"></use>
           </svg>
         </a>
-        <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
+        <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="modal__form form">
           <input type="text" name="name" class="input modal__input" placeholder="Your Full Name*" required minlength="2">
           <input type="tel" name="phone" class="input modal__input input-phone" placeholder="Phone Number*" required>

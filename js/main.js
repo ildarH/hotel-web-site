@@ -111,29 +111,29 @@ $(document).ready(function () {
   });
   
   $('.input-phone').mask('+0 (000) 000-00-00');
-  const mediaQuery = window.matchMedia('(min-width: 993px)');
-  console.log(mediaQuery.matches, ' - match');
-  let newsletterSection = document.querySelector('.newsletter');
-  function mediaResponsive(e) {
-    console.log('newsletter obj: ', newsletterSection);
-    if (e.matches) {
-      newsletterSection.classList.add('parallax-window');
-      newsletterSection.dataset.parallax = 'scroll';
-      newsletterSection.dataset.imageSrc = 'img/newsletter_background.jpg';
-      // $('.parallax-window').parallax({
-      //   naturalWidth: 2880,
-      //   naturalHeight: 1913,
-      // });
-    } else {
-      let mirror = document.querySelector('.parallax-mirror');
-      // mirror.remove();
-      newsletterSection.classList.remove('parallax-window');
-      newsletterSection.dataset.parallax = '';
-      newsletterSection.dataset.imageSrc = '';
-    }
-  }
+  // const mediaQuery = window.matchMedia('(min-width: 993px)');
+  // console.log(mediaQuery.matches, ' - match');
+  // let newsletterSection = document.querySelector('.newsletter');
+  // function mediaResponsive(e) {
+  //   console.log('newsletter obj: ', newsletterSection);
+  //   if (e.matches) {
+  //     newsletterSection.classList.add('parallax-window');
+  //     newsletterSection.dataset.parallax = 'scroll';
+  //     newsletterSection.dataset.imageSrc = 'img/newsletter_background.jpg';
+  //     // $('.parallax-window').parallax({
+  //     //   naturalWidth: 2880,
+  //     //   naturalHeight: 1913,
+  //     // });
+  //   } else {
+  //     let mirror = document.querySelector('.parallax-mirror');
+  //     // mirror.remove();
+  //     newsletterSection.classList.remove('parallax-window');
+  //     newsletterSection.dataset.parallax = '';
+  //     newsletterSection.dataset.imageSrc = '';
+  //   }
+  // }
   
-  mediaQuery.addListener(mediaResponsive);
+  // mediaQuery.addListener(mediaResponsive);
 });
 
 // lazy loading image

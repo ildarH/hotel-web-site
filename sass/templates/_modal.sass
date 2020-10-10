@@ -15,10 +15,11 @@
       opacity: 1
   &__dialog
     position: fixed
-    top: 50%
+    top: 30%
     left: 50%
     width: 478px
-    padding: 33px 88px
+    min-height: 487px
+    padding: 25px 88px
     transform: translate(-50%, -50%)
     background-color: $dark
     color: $light
@@ -37,12 +38,14 @@
     text-decoration: none
     cursor: pointer
   &__title
+    margin-block-start: 0em
+    margin-block-end: 0em
     font-family: Mulish
     font-style: normal
     font-weight: bold
     font-size: 18px
     line-height: 23px
-    margin-bottom: 15px
+    margin-bottom: 5px
     text-transform: uppercase
     text-align: center
   &__input
@@ -58,6 +61,7 @@
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+    margin-top: 10px
   &__form
     display: flex
     align-items: center
