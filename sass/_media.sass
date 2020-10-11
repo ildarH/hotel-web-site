@@ -37,7 +37,9 @@
       &-group
         flex-basis: 100%
 @media (max-width: 992px)
-  .container, .newsletter-wrapper
+  .container
+    max-width: 700px
+  .newsletter-wrapper
     max-width: 700px
   .logo
     width: 132px
@@ -92,7 +94,7 @@
       &__item
         max-width: 580px
       &-button
-        top: 36%
+        top: 49%
         &-prev
           left: 0%
         &-next
@@ -114,6 +116,7 @@
   .newsletter
     padding-top: 70px
     background-color: $dark
+    height: 262px
   .card
     &-1
       width: 710px
@@ -134,7 +137,7 @@
       grid-gap: 40px
     &__input
       &-group
-        flex-basis: 48%
+        flex-basis: 47%
     &__logo
       width: 95px
       height: 120px
@@ -170,13 +173,18 @@
       width: 540px
     &__disclaimer
       padding-top: 0px
-      grid-column: 1/6
+      grid-column: 1/3
       align-self: end
       justify-self: flex-start
     &__payicons
       align-self: end
       justify-self: end
       grid-column: 5/7
+@media (max-width: 768px)
+  .container
+    max-width: 700px
+  .newsletter-wrapper
+    max-width: 700px
 @media (max-width: 720px)
   .logo
     width: 99px
@@ -225,7 +233,8 @@
       margin-bottom: 36px
   .other-packages
     &__grid
-      grid-column: 1
+      grid-template-columns: 1fr
+      grid-auto-rows: 350px
   .card
     &-1, &-2, &-3, &-4, &-5
       justify-content: space-between
@@ -233,22 +242,33 @@
       width: auto
       height: auto
       grid-column: auto
+      max-height: 350px
       &-header
-        display: none
+        flex-basis: 50%
+        &__image
+          // width: 355px
+          height: auto
+        &__promo
+          width: 60px
+          height: 18px
+          font-size: 8px
+          line-height: 10px
+          padding: 4px 9px
       &-main
         padding: 20px 10px 10px 20px
         justify-content: space-between
-        flex-grow: 1
+        flex-basis: 50%
         &__rating
           display: flex
           margin-bottom: 9px
           width: 48px
           justify-content: space-between
         &__text
-          padding-top: 60px
+          overflow-y: auto
+          padding-top: 20px
           display: block
         &__info
-          padding-top: 30px
+          padding-top: 20px
         &__footer
           padding-top: 15px
         &-footer
@@ -335,6 +355,7 @@
       bottom: 0
       top: 78px
       padding-top: 30px
+      overflow-y: scroll
       &_visible
         display: block
     &__mobile
@@ -346,6 +367,9 @@
         z-index: 99
     &-menu
       flex-direction: column
+      &__link
+        &:hover
+          background-color: transparent
       &__item
         margin-bottom: 20px
         &_mobile
@@ -368,6 +392,12 @@
         width: 16px
         height: 1px
         background-color: $textColor
+  .breadcrumb
+    &-list
+      &__link
+        &:hover
+          background-color: transparent
+          color: $textColor
   .user
     &__name
       &__color
@@ -426,51 +456,55 @@
   .card
     width: 49%
     height: 255px
+    &__button
+      &:hover
+        background-color: $primaryColor
   .other-packages
     &__grid
       grid-template-columns: 1fr
-      grid-template-rows: repeat(auto-fill, 250px)
+      grid-template-rows: 500px repeat(auto-fill, 250px)
+      grid-auto-rows: auto
   .card
     &-1
       grid-column: auto
       height: auto
       width: auto
+      max-height: 500px
       &-header
-        &__promo
-          width: 60px
-          height: 18px
-          font-size: 8px
-          line-height: 10px
-          padding: 4px 9px
+        height: 500px
+        flex-basis: fill
       &-main
-        &__text, &__rating
-          display: none
-          // padding-top: 45px
+        &__text
+          margin-top: 30px
     &-2, &-3, &-4, &-5
       flex-direction: row
       width: auto
       height: auto
-      &-main
-        &__text, &__rating
-          display: none
-        &__info
-          padding-top: 20px
-    &-1, &-2, &-3, &-4, &-5
       &-header
         width: 50%
-        height: 250px
+      &-main
+        &__rating
+          display: none
+        &__text
+          display: none
+    &-1, &-2, &-3, &-4, &-5
+      &-header
+        // width: 50%
+        // height: 250px
         &__image
           object-fit: cover
           width: 100%
-          max-height: 250px
+          // max-height: 250px
       &-main
         padding: 20px 10px 10px 20px
         &__text
-          padding-top: 30px
+          // display: none
+          // padding-top: 30px
         &__info
           padding-top: 30px
+          padding-bottom: 20px
         &__footer
-          padding-top: 40px
+          padding-top: 0
           &-info
         &-footer
           &__button
@@ -478,6 +512,8 @@
             height: 30px
             font-size: 12px
             padding: 5px 10px
+            &:hover
+              background-color: $primaryColor
       &-info
         &-text
           padding-bottom: 5px
@@ -492,14 +528,51 @@
   .footer
     &-wrapper
       grid-gap: 20px
+  .button:hover
+    background-color: $primaryColor
+  .subscribe
+    &__button
+      &:hover
+        background-color: $primaryColor
 @media (max-width: 470px)
   .card
     width: 100%
+  .other-packages
+    &__grid
+      grid-template-rows: 650px repeat(auto-fill, 500px)
+      justify-items: center
+  .card
+    &-1, &-2, &-3, &-4, &-5
+      flex-direction: column
+      width: 310px
+      &-header
+        height: 250px
+        width: 310px
+        flex-basis: auto
+        &__image
+          height: 250px
+      &-main
+        padding: 30px 15px 20px 35px
+      &-info
+        &-text
+          &__icon
+            margin-right: 0
+    &-1
+      max-height: 650px
+      &-main
+        &__text
+          margin-top: 0
+          padding-top: 10px
+        &__info
+          padding-top: 15px
+    &-2, &-3, &-4, &-5
+      max-height: 500px
+      height: 500px
   .modal
     &__dialog
-      top: 50%
-      width: 87%
-      padding: 25px 20px
+      padding: 25px 34px
+    &__content
+      width: 380px
 @media (max-width: 360px)
   .navbar
     &-top
@@ -514,6 +587,15 @@
     height: 100%
   .subscribe
     min-width: 330px
+    &__input
+      padding-left: 20px
+  .newsletter
+    &__input
+      &-group
+        min-width: 330px
+  .modal
+    &__content
+      width: 278px
 @media (max-width: 320px)
   .container
     width: 87%
@@ -541,24 +623,42 @@
       padding-bottom: 40px
     &-slider
       height: 180px
+      &__button
+        background-size: 4px
+        top: 51%
+        &-next
+          right: 0px
+        &-prev
+          left: -3px
   .newsletter
-    padding-top: 75px
+    padding-top: 58px
+    &__input
+      &-group
+        min-width: auto
     &-wrapper
       width: 87%
     &-title
-      margin-bottom: 30px
+      margin-bottom: 22px
       font-size: 20px
       &__strong
         font-size: 30px
     &__subscribe
       min-width: 278px
+  .subscribe
+    &__input
+      padding-left: 21px
+    &__button
+      right: 0
   .reviews
+    padding-bottom: 38px
     &__title
       padding-bottom: 0
       margin-bottom: 40px
     &-slider
+      &__text
+        text-align: left
       &-button
-        top: 4%
+        top: 7%
         &-prev
           left: 40%
         &-next
@@ -567,31 +667,63 @@
         margin-top: 37px
       &__profile
         margin-top: -35px
+        margin-bottom: 30px
+  .other-packages
+    &__grid
+      grid-template-rows: 670px repeat(auto-fill, 500px)
   .card
     width: 100%
+    &-1, &-2, &-3, &-4, &-5
+      width: 90%
+      &-main
+        padding: 30px 15px 20px 25px
+    &-1
+      min-height: 670px
+    &-mb
+  .activities
+    padding-bottom: 40px
+    &__card
+      &-1
+        order: 0
+      &-2
+        order: 2
+      &-3
+        order: 1
+        margin-bottom: 28px
+      &-4
+        order: 3
   .footer
     padding-top: 60px
+    &__contact
+      &-details
+        margin-top: -4px
+    &__logo
+      margin-top: 3px
+      height: 111px
     &__title
       &--inline
         margin-right: 0px
         margin-top: 5px
         flex-basis: 100%
       &--mb-4
-        margin-bottom: 15px
-        margin-top: 15px
+        margin-top: 17px
+        margin-bottom: 18px
     &__social
       &-network
+        margin-top: 20px
         grid-row: 2
         flex-wrap: wrap
       &-links
-        margin-top: 26px
+        margin-top: 23px
     &__legal
+      margin-left: 0px
+      margin-top: 8px
       grid-row: 3
     &__additional
       margin-top: 8px
       grid-row: 4
     &__categories
-      margin-top: 10px
+      margin-top: 8px
       grid-row: 5
     &__icon
       &-wrapper
@@ -605,13 +737,22 @@
       margin-top: 5px
       align-self: auto
       width: 100%
+    &__info
+      margin-top: -2px
     &__payicons
       align-self: auto
       grid-row: 8
       margin-top: 30px
       align-self: flex-end
   .modal
-    &__dialog
-      top: 50%
-      width: 87%
-      padding: 25px 20px
+    &__content
+      width: 235px
+    &__info
+      order: 0
+      margin-top: 5px
+      align-self: flex-end
+    &__button
+      flex-basis: 100%
+      margin-top: 5px
+    &__footer
+      flex-direction: column-reverse

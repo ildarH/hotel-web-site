@@ -31,6 +31,8 @@
       text-transform: uppercase
       font-size: 14px
       line-height: 18px
+      &:hover
+        background-color: $primaryColor
     &__item
       &_mobile
         &_visible
@@ -52,7 +54,9 @@
     border: none
     font-size: 12px
     line-height: 15px
+    font-style: normal
     color: $textColor
+    outline: none
   &__button
     position: absolute
     top: 0
@@ -61,6 +65,9 @@
     height: 100%
     border: none
     background-color: $primaryColor
+    cursor: pointer
+    &:hover
+      background-color: $hoverColor
 .user
   display: flex
   align-items: center

@@ -17,6 +17,7 @@
     height: 100%
     background-color: rgba($dark, 0.8)
   &-wrapper
+    padding-top: 17px
     position: relative
     display: flex
     align-items: center
@@ -37,17 +38,24 @@
       line-height: 45px
       letter-spacing: 0.017em
       text-transform: uppercase
+  &__input
+    &-group
+      position: relative
+      min-width: 350px
+      min-height: 80px
+      display: flex
+      top: 12px
 .subscribe
-  position: relative
-  min-width: 350px
-  min-height: 55px
-  max-height: auto
+  position: absolute
+  // min-width: 350px
+  // min-height: 55px
+  // max-height: auto
   border-radius: 4px
   overflow: hidden
   &__input
-    position: absolute
-    width: 100%
-    height: 100%
+    // position: absolute
+    width: 350px
+    height: 55px
     border: none
     padding-left: 33px
     padding-right: 75px
@@ -60,7 +68,7 @@
     min-width: 65px
     right: 0
     top: 0
-    height: 100%
+    height: 55px
     border: none
     text-overflow: clip
     white-space: normal
@@ -68,4 +76,10 @@
     color: $light
     outline: none
     cursor: pointer
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    &:hover
+      background-color: $hoverColor
 

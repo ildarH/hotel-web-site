@@ -13,12 +13,32 @@
     &_visible
       visibility: visible
       opacity: 1
+  &__content
+    overflow-y: auto
+    max-height: calc(100vh - 215px)
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+      background-color: $dark
+    &::-webkit-scrollbar
+      width: 7px
+      background-color: red
+    &::-webkit-scrollbar-thumb
+      background-color: #244e7c
+      border: none
+    scrollbar-color: #244e7c $dark
+    scrollbar-width: thin
+  &__footer
+    display: flex
+    align-content: center
+    justify-content: space-between
   &__dialog
     position: fixed
-    top: 30%
+    top: 50%
     left: 50%
-    width: 478px
-    min-height: 487px
+    // max-width:calc(100% - 80px)
+    // max-height:calc(100% - 80px)
+    max-width: 478px
+    max-height: 487px
     padding: 25px 88px
     transform: translate(-50%, -50%)
     background-color: $dark
@@ -45,23 +65,33 @@
     font-weight: bold
     font-size: 18px
     line-height: 23px
-    margin-bottom: 5px
+    margin-bottom: 3px
+    margin-top: 9px
     text-transform: uppercase
     text-align: center
   &__input
     width: 100%
     margin-top: 15px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__message
     width: 100%
     min-height: 123px
     margin-top: 15px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__info
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
-    margin-top: 10px
+    margin-top: 12px
+    align-self: center
   &__form
     display: flex
     align-items: center

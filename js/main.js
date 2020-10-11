@@ -96,15 +96,15 @@ $(document).ready(function () {
       errorClass: 'invalid',
       messages: {
         name: {
-          required: 'Укажите имя',
-          minlength: 'Имя должно быть не короче двух букв',
+          required: 'Name required',
+          minlength: 'Name must be longer than 2 characters',
         },
         email: {
-          required: 'Укажите адрес электронной почты',
-          email: 'Адрес электронной почты должен быть в формате name@domain.com',
+          required: 'Please specify your e-mail',
+          email: 'A valid e-mail address like name@domain.com',
         },
         phone: {
-          required: 'Укажите номер телефона',
+          required: 'Phone number required',
         },
       },
     });
