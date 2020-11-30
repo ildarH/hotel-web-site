@@ -1,2 +1,2 @@
-# Tour Plan
-training web-site
+# Hotel web-site
+training web-site with HTML+SASS+JS
